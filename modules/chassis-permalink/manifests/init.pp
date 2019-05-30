@@ -4,7 +4,7 @@ class chassis-permalink (
   if $config[permalink] {
     $permalink_scheme = $config[permalink]
 
-    wp::command { 'wp site empty':
+    wp::command { 'wp rewrite structure':
       location => $config[mapped_paths][base],
       command  => "rewrite structure '${ $permalink_scheme }'",
       # These tasks will not run unless WP is installed.
