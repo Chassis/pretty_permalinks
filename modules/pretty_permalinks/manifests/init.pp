@@ -1,4 +1,4 @@
-class chassis-permalink (
+class pretty_permalinks (
   $config
 ) {
   if $config[permalink] {
